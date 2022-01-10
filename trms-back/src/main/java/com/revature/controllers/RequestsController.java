@@ -1,12 +1,20 @@
 package com.revature.controllers;
 
+import java.util.Set;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.revature.beans.Employee;
 import com.revature.beans.Reimbursement;
+import com.revature.data.EmployeeDAO;
+import com.revature.data.ReimbursementDAO;
+import com.revature.data.postgres.EmployeePostgres;
+import com.revature.data.postgres.ReimbursementPostgres;
 import com.revature.services.EmployeeService;
 import com.revature.services.EmployeeServiceImpl;
+import com.revature.services.RequestReviewService;
+import com.revature.services.RequestReviewServiceImpl;
 
 import io.javalin.http.Context;
 import io.javalin.http.HttpCode;
@@ -14,6 +22,7 @@ import io.javalin.http.HttpCode;
 public class RequestsController {
 	private static EmployeeService empServ = new EmployeeServiceImpl();
 	private static Logger log = LogManager.getLogger(RequestsController.class);
+	private static ReimbursementDAO reqDAO = new ReimbursementPostgres();
 	
 	/**
 	 * Retrieves the submitted reimbursement request from the
@@ -65,7 +74,7 @@ public class RequestsController {
 	 */
 	public static void getRequestsByRequestor(Context ctx) {
 		String requestorIdStr = ctx.pathParam("id");
-		
+		log.info("getting all of the requestor requests");
 		try {
 			int requestorId = Integer.valueOf(requestorIdStr);
 			Employee requestor = empServ.getEmployeeById(requestorId);
@@ -80,5 +89,10 @@ public class RequestsController {
 			ctx.status(400);
 			ctx.result("Requestor ID must be an integer. Please try again.");
 		}
+	}
+	public static void viewAllRequests(Context ctx) {
+		log.info("Get all requests");
+		Set<Reimbursement> reqs = reqDAO.getAll();	
+		ctx.json(reqs);
 	}
 }

@@ -61,17 +61,20 @@ body {
   min-height: calc(100vh - 85px);
 }
 
-.btn-primary {
+.btn {
   font-family: "Open Sans", sans-serif;
-  background-color: #ff52bf;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
   font-size: 1em;
   font-weight: 600;
-  border: 1px #ff52bf solid;
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-top: 1em;
-  padding-bottom: 1em;
   border-radius: 2.5em;
+}
+
+.btn-primary {
+  background-color: #ff52bf;
+  border: 1px #ff52bf solid;
 }
 
 .btn-primary:hover {
@@ -80,45 +83,56 @@ body {
 }
 
 .btn-primary:active {
-  font-family: "Open Sans", sans-serif;
   background-color: #ff52bf;
-  font-size: 1em;
-  font-weight: 600;
   border: 1px #ff52bf solid;
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-top: 1em;
-  padding-bottom: 1em;
 }
 
 .btn-primary:focus {
-  font-family: "Open Sans", sans-serif;
   background-color: #ff8fd8 !important;
-  font-size: 1em;
-  font-weight: 600;
   border: 1px #ff52bf solid !important;
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-top: 1em;
-  padding-bottom: 1em;
 }
 
 .btn-outline-primary {
   background-color: #fff;
   color: #ff52bf;
   border: 1px #ff52bf solid;
-  padding-left: 4em;
-  padding-right: 4em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  border-radius: 2.5em;
-  font-size: 1em;
-  font-weight: 600;
 }
 
 .btn-outline-primary:hover {
   background-color: #ff8fd8;
   border: 1px #ff8fd8 solid;
+}
+
+.btn-sky {
+  color: white;
+  background-color: #00c7fa;
+  border: 1px #00c7fa solid;
+}
+
+.btn-sky:hover {
+  background-color: #8ee8ff;
+  border: 1px #8ee8ff solid;
+}
+
+.btn-sky:active {
+  background-color: #8ee8ff;
+  border: 1px #8ee8ff solid;
+}
+
+.btn-sky:focus {
+  background-color: #8ee8ff !important;
+  border: 1px #8ee8ff solid !important;
+}
+
+.btn-outline-sky {
+  background-color: #fff;
+  color: #00c7fa;
+  border: 1px #00c7fa solid;
+}
+
+.btn-outline-sky:hover {
+  background-color: #8ee8ff;
+  border: 1px #8ee8ff solid;
 }
 
 header .width-container {
@@ -127,12 +141,35 @@ header .width-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+header .width-container .left-side h1 {
+  cursor: pointer;
+}
+header .width-container .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+header .width-container .right-side .btn {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0;
 }
 
 #home-page .width-container {
@@ -185,12 +222,153 @@ header .width-container {
   width: 100%;
   padding-top: 5rem;
 }
+#sign-in-page .width-container .invalid-credentials {
+  display: none;
+}
+#sign-in-page .width-container .invalid-credentials p {
+  color: #ff4242;
+}
+
+#sign-up-page {
+  display: none;
+}
+#sign-up-page .width-container {
+  min-height: calc(100vh - 85px);
+  width: 100%;
+  padding-top: 5rem;
+}
+
+#my-requests-page {
+  display: none;
+}
+#my-requests-page .width-container {
+  min-height: calc(100vh - 85px);
+  width: 100%;
+  padding-top: 5rem;
+}
+
+#pending-requests-page {
+  display: none;
+}
+#pending-requests-page .width-container {
+  min-height: calc(100vh - 85px);
+  width: 100%;
+  padding-top: 5rem;
+}
+
+#employee-request {
+  display: none;
+}
+#employee-request .width-container {
+  min-height: calc(100vh - 85px);
+  width: 100%;
+  padding-top: 5rem;
+}
+
+#all-employees {
+  display: none;
+}
+#all-employees .width-container {
+  min-height: calc(100vh - 85px);
+  width: 100%;
+  padding-top: 5rem;
+}
+
+#all-requests-page {
+  display: none;
+}
+#all-requests-page .width-container {
+  min-height: calc(100vh - 85px);
+  width: 100%;
+  padding-top: 5rem;
+}
+
+#manage-requests {
+  display: none;
+}
+#manage-requests .width-container {
+  min-height: calc(100vh - 85px);
+  width: 100%;
+  padding-top: 5rem;
+}
+
+#user-home {
+  display: none;
+}
+#user-home .width-container {
+  min-height: calc(100vh - 85px);
+  width: 100%;
+  padding-top: 5rem;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+#user-home .width-container .left-side {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#user-home .width-container .left-side p {
+  line-height: 1.5;
+}
+#user-home .width-container .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#user-home .width-container .right-side img {
+  width: 100%;
+}
 
 @media screen and (min-width: 768px) {
+  header .width-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
   #home-page .width-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 2rem 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  #home-page .width-container .right-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  #home-page .width-container .right-side .btn {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  #user-home .width-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }

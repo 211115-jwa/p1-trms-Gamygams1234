@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tuition Reimbursement Management System (TRMS)</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -20,13 +21,24 @@
         <div class="left-side">
           <h1 class="poppins fw-900 to-home">TRMS</h1>
         </div>
-        <div class="right-side"><button class="btn btn-primary to-sign-in">Sign In</button></div>
+        <div id="header-nav" class="right-side"></div>
       </div>
     </header>
     <section id="home-page" class="dark-cyan padding-container page">
       <div class="width-container">
         <div class="left-side">
           <h1 class="mt-3 mb-3 poppins fw-500">Tuition Reimbursement Management System</h1>
+          <p class="mt-3 mb-3">Handle all the tuition needs with this app. Sign in or sign up to get started.</p>
+        </div>
+        <div class="right-side">
+          <img src="./images/illustration-flowing-conversation.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section id="user-home" class="dark-cyan padding-container page">
+      <div class="width-container">
+        <div class="left-side">
+          <h1 class="mt-3 mb-3 poppins fw-500">Welcome <span class="fullname-ui"></span></h1>
           <p class="mt-3 mb-3">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
         </div>
         <div class="right-side">
@@ -34,56 +46,762 @@
         </div>
       </div>
     </section>
+    <section id="manage-requests" class="dark-cyan padding-container page">
+      <div class="width-container">
+        <div class="left-side">
+          <h1 class="mt-3 mb-3 poppins fw-500">this is the manageRequestsPage</h1>
+          <p class="mt-3 mb-3">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
+        </div>
+        <div class="right-side">
+          <img src="./images/illustration-flowing-conversation.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="all-employees" class="dark-cyan padding-container page">
+      <div class="width-container">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">Funds</th>
+            </tr>
+          </thead>
+          <tbody id="all-employees-body">
+            <tr index="1">
+              <th scope="row">id</th>
+              <td>first</td>
+              <td>last</td>
+              <td>role</td>
+              <td>fund</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pending-requests-page" class="dark-cyan padding-container page">
+      <div class="width-container">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Request ID</th>
+              <th scope="col">Employee ID</th>
+              <th scope="col">Location</th>
+              <th scope="col">Funds</th>
+              <th scope="col">Cost</th>
+              <th scope="col">Month</th>
+              <th scope="col">Day</th>
+              <th scope="col">Year</th>
+              <th scope="col">Approve</th>
+              <th scope="col">Deny</th>
+            </tr>
+          </thead>
+          <tbody id="pending-requests-body">
+            <tr index="1">
+              <td scope="row">id</td>
+
+              <td>first</td>
+              <td>last</td>
+              <td>role</td>
+              <td>fund</td>
+              <td>fund</td>
+              <td>fund</td>
+              <td>fund</td>
+              <td>fund</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="my-requests-page" class="dark-cyan padding-container page">
+      <div class="width-container">
+        <h2 id="no-current-requests">You have currently no requests.</h2>
+        <table id="my-current-requests" class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Request ID</th>
+              <th scope="col">Location</th>
+              <th scope="col">Cost</th>
+              <th scope="col">Month</th>
+              <th scope="col">Day</th>
+              <th scope="col">Year</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="my-requests-body">
+            <tr index="1">
+              <td scope="row">id</td>
+              <td>first</td>
+              <td>last</td>
+              <td>role</td>
+              <td>fund</td>
+              <td>fund</td>
+              <td>fund</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="all-requests-page" class="dark-cyan padding-container page">
+      <div class="width-container">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Request ID</th>
+              <th scope="col">Employee ID</th>
+              <th scope="col">Location</th>
+              <th scope="col">Funds</th>
+              <th scope="col">Cost</th>
+              <th scope="col">Month</th>
+              <th scope="col">Day</th>
+              <th scope="col">Year</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="all-requests-body">
+            <tr index="1">
+              <td scope="row">id</td>
+              <td>first</td>
+              <td>last</td>
+              <td>role</td>
+              <td>fund</td>
+              <td>fund</td>
+              <td>fund</td>
+              <td>fund</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="employee-request" class="dark-cyan padding-container page">
+      <div class="width-container">
+        <form id="submitRequestForm">
+          <div class="form-group">
+            <label for="inputAddress">Event Location:</label>
+            <input type="text" class="form-control" id="requestLocation" placeholder="Washington University" />
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="requestType">Event Type:</label>
+              <select class="form-control" id="requestType">
+                <option index="1">University Course</option>
+                <option index="2">Seminar</option>
+                <option index="3">Certification Prep</option>
+                <option index="4">Certification</option>
+                <option index="5">Technical Training</option>
+                <option index="6">Other</option>
+              </select>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="requestGradingFormat">Grading format:</label>
+              <select class="form-control" id="requestGradingFormat">
+                <option index="1">Pass/Fail</option>
+                <option index="2">A,B,C,D,F</option>
+                <option index="3">Percentage</option>
+                <option index="4">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="requestCost">Cost:</label>
+              <input type="text" class="form-control" id="requestCost" />
+            </div>
+            <div class="form-group col-md-4">
+              <label for="requestDate">Date:</label>
+              <input type="date" class="form-control" id="requestDate" name="submitDate" value="2022-01-07" min="2018-01-01" max="2050-12-31" />
+            </div>
+            <div class="form-group col-md-4">
+              <label for="requestTime">Time:</label>
+              <input type="time" class="form-control" id="requestTime" name="eventTime" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="requestDescription">Description:</label>
+              <textarea rows="4" cols="50" maxlength="200" class="form-control" id="requestDescription"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Request</button>
+        </form>
+      </div>
+    </section>
     <section id="sign-in-page" class="padding-container page">
       <div class="width-container">
-        <form>
+        <form id="sign-in-form">
           <div class="form-group row mb-3">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="inputUsername" placeholder="Username" />
+              <input type="text" class="form-control" id="signInUsername" placeholder="Username" />
             </div>
           </div>
           <div class="form-group row mb-3">
             <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="inputPassword" placeholder="Password" />
+              <input type="password" class="form-control" id="signInPassword" placeholder="Password" />
             </div>
           </div>
-
+          <div id="invalid-credentials" class="invalid-credentials mb-3">
+            <p>Password or username was invalid.</p>
+          </div>
           <div class="form-group row">
             <div class="col-sm-10">
               <button type="submit" class="btn btn-primary">Sign In</button>
               <button class="btn btn-outline-primary to-home">Back To Home</button>
-
             </div>
           </div>
         </form>
       </div>
     </section>
+    <section id="sign-up-page" class="padding-container page">
+      <div class="width-container">
+        <form>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="validationCustom01">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationCustom02">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="validationCustomUsername">Username</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required />
+                <div class="invalid-feedback">Please choose a username.</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="createPassword">Password</label>
+              <input type="password" class="form-control" name="createPassword" id="createPassword" placeholder="Password" />
+              <div class="valid-feedback">Looks good!</div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-sky">Sign Up</button>
+              <button class="btn btn-outline-sky to-home">Back To Home</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
+      // pages
       const signInPage = document.getElementById("sign-in-page");
+      const signUpPage = document.getElementById("sign-up-page");
       const homePage = document.getElementById("home-page");
+      const userHomePage = document.getElementById("user-home");
+      const manageRequestsPage = document.getElementById("manage-requests");
+      const allEmployeesPage = document.getElementById("all-employees");
+      const employeeRequestPage = document.getElementById("employee-request");
+      const pendingRequestPage = document.getElementById("pending-requests-page");
+      const allRequestsPage = document.getElementById("all-requests-page");
+      const myRequestsPage = document.getElementById("my-requests-page");
 
       // ref buttons
-      const toSignIn = document.querySelectorAll(".to-sign-in");
+
       const toHome = document.querySelectorAll(".to-home");
 
+      // forms
+      const signInForm = document.getElementById("sign-in-form");
+
+      // headerNav
+      const headerNav = document.getElementById("header-nav");
+      // url app
+      const trmsAppUrl = "http://localhost:8080/";
 
       // adding event listener
-      for (let i = 0; i < toSignIn.length; i++) {
-        toSignIn[i].addEventListener("click", function () {
-          homePage.style.display = 'none';     
-          signInPage.style.display = 'block';     
-        });
-      }
+
       for (let i = 0; i < toHome.length; i++) {
         toHome[i].addEventListener("click", function () {
-          homePage.style.display = 'block'; 
-          signInPage.style.display = 'none';     
-         
+          homePage.style.display = "block";
+          signInPage.style.display = "none";
+          signUpPage.style.display = "none";
+          userHomePage.style.display = "none";
+          manageRequestsPage.style.display = "none";
+          allEmployeesPage.style.display = "none";
+          employeeRequestPage.style.display = "none";
+          pendingRequestPage.style.display = "none";
+          allRequestsPage.style.display = "none";
+          myRequestsPage.style.display = "none";
         });
       }
 
+      signInForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        submitLogin();
+      });
+
+      // log in Authorizaton
+
+      async function checkLogin() {
+        let personId = localStorage.getItem("Token");
+        if (personId) {
+          let response = await fetch(trmsAppUrl + "users/" + personId + "/auth");
+          if (response.status === 200) {
+            loggedInPerson = await response.json();
+            console.log(loggedInPerson);
+          }
+        } else {
+          loggedInPerson = null;
+        }
+        updateNav();
+      }
+
+      function updateNav() {
+        if (loggedInPerson) {
+          let status = loggedInPerson.role.name;
+          if (status === "User") {
+            headerNav.innerHTML = `<button class="btn btn-primary view-my-requests">View My Requests</button><button class="btn btn-primary submit-request">Submit a Request</button><button class="btn btn-primary view-all-employees">View All Employees</button><button class="btn btn-sky log-out">Log Out</button>`;
+          } else if (status === "Supervisor") {
+            headerNav.innerHTML = `<button class="btn btn-primary view-all-requests">View All Requests</button><button class="btn btn-primary view-pending-requests">View Pending Requests</button><button class="btn btn-primary view-all-employees">View All Employees</button><button class="btn btn-sky log-out">Log Out</button>`;
+          } else if (status === "Department Manager") {
+            headerNav.innerHTML = `<button class="btn btn-primary view-all-requests">View All Requests</button><button class="btn btn-primary view-pending-requests">View Pending Requests</button><button class="btn btn-primary view-all-employees">View All Employees</button><button class="btn btn-sky log-out">Log Out</button>`;
+          } else if (status === "Benefits Coordinator") {
+            headerNav.innerHTML = `<button class="btn btn-primary view-all-requests">View All Requests</button><button class="btn btn-primary view-pending-requests">View Pending Requests</button><button class="btn btn-primary view-all-employees">View All Employees</button> <button class="btn btn-sky log-out">Log Out</button>`;
+          }
+          let logOutButton = document.querySelectorAll(".log-out");
+          let allEmployeesButton = document.querySelectorAll(".view-all-employees");
+          let submitRequestButton = document.querySelectorAll(".submit-request");
+          let viewPendingRequestButton = document.querySelectorAll(".view-pending-requests");
+          let viewAllRequestButton = document.querySelectorAll(".view-all-requests");
+          let viewMyRequestsButton = document.querySelectorAll(".view-my-requests");
+
+          // setting some of the UI
+
+          let fullNameUI = document.querySelectorAll(".fullname-ui");
+
+          for (let i = 0; i < fullNameUI.length; i++) {
+            fullNameUI[i].innerHTML = `${loggedInPerson.firstName} ${loggedInPerson.lastName}`;
+          }
+
+          // closing displays
+          userHomePage.style.display = "block";
+          signInPage.style.display = "none";
+          signUpPage.style.display = "none";
+          homePage.style.display = "none";
+          manageRequestsPage.style.display = "none";
+          allEmployeesPage.style.display = "none";
+          employeeRequestPage.style.display = "none";
+          pendingRequestPage.style.display = "none";
+          allRequestsPage.style.display = "none";
+          myRequestsPage.style.display = "none";
+
+          // adding listeners to new buttons
+
+          for (let i = 0; i < logOutButton.length; i++) {
+            logOutButton[i].addEventListener("click", function () {
+              logOut();
+              homePage.style.display = "block";
+              signInPage.style.display = "none";
+              signUpPage.style.display = "none";
+              userHomePage.style.display = "none";
+              manageRequestsPage.style.display = "none";
+              allEmployeesPage.style.display = "none";
+              employeeRequestPage.style.display = "none";
+              pendingRequestPage.style.display = "none";
+              allRequestsPage.style.display = "none";
+              myRequestsPage.style.display = "none";
+            });
+          }
+          for (let i = 0; i < allEmployeesButton.length; i++) {
+            allEmployeesButton[i].addEventListener("click", function () {
+              homePage.style.display = "none";
+              signInPage.style.display = "none";
+              signUpPage.style.display = "none";
+              userHomePage.style.display = "none";
+              manageRequestsPage.style.display = "none";
+              employeeRequestPage.style.display = "none";
+              allEmployeesPage.style.display = "block";
+              pendingRequestPage.style.display = "none";
+              allRequestsPage.style.display = "none";
+              myRequestsPage.style.display = "none";
+
+              getAllEmployeesTable();
+            });
+          }
+          for (let i = 0; i < submitRequestButton.length; i++) {
+            submitRequestButton[i].addEventListener("click", function () {
+              homePage.style.display = "none";
+              signInPage.style.display = "none";
+              signUpPage.style.display = "none";
+              userHomePage.style.display = "none";
+              manageRequestsPage.style.display = "none";
+              employeeRequestPage.style.display = "block";
+              allEmployeesPage.style.display = "none";
+              pendingRequestPage.style.display = "none";
+              allRequestsPage.style.display = "none";
+              myRequestsPage.style.display = "none";
+            });
+          }
+          for (let i = 0; i < viewPendingRequestButton.length; i++) {
+            viewPendingRequestButton[i].addEventListener("click", function () {
+              getAllPendingRequests();
+              homePage.style.display = "none";
+              signInPage.style.display = "none";
+              signUpPage.style.display = "none";
+              userHomePage.style.display = "none";
+              manageRequestsPage.style.display = "none";
+              employeeRequestPage.style.display = "none";
+              allEmployeesPage.style.display = "none";
+              pendingRequestPage.style.display = "block";
+              allRequestsPage.style.display = "none";
+              myRequestsPage.style.display = "none";
+            });
+          }
+          for (let i = 0; i < viewAllRequestButton.length; i++) {
+            viewAllRequestButton[i].addEventListener("click", function () {
+              getAllRequests();
+              homePage.style.display = "none";
+              signInPage.style.display = "none";
+              signUpPage.style.display = "none";
+              userHomePage.style.display = "none";
+              manageRequestsPage.style.display = "none";
+              employeeRequestPage.style.display = "none";
+              allEmployeesPage.style.display = "none";
+              pendingRequestPage.style.display = "none";
+              allRequestsPage.style.display = "block";
+              myRequestsPage.style.display = "none";
+            });
+          }
+          for (let i = 0; i < viewMyRequestsButton.length; i++) {
+            viewMyRequestsButton[i].addEventListener("click", function () {
+              getMyRequests();
+              homePage.style.display = "none";
+              signInPage.style.display = "none";
+              signUpPage.style.display = "none";
+              userHomePage.style.display = "none";
+              manageRequestsPage.style.display = "none";
+              employeeRequestPage.style.display = "none";
+              allEmployeesPage.style.display = "none";
+              pendingRequestPage.style.display = "none";
+              allRequestsPage.style.display = "none";
+              myRequestsPage.style.display = "block";
+            });
+          }
+        } else if (loggedInPerson == null) {
+          headerNav.innerHTML = `<button class="btn btn-primary to-sign-in">Sign In</button>`;
+          let toSignIn = document.querySelectorAll(".to-sign-in");
+          let toSignUp = document.querySelectorAll(".to-sign-up");
+          for (let i = 0; i < toSignUp.length; i++) {
+            toSignUp[i].addEventListener("click", function () {
+              homePage.style.display = "none";
+              signInPage.style.display = "none";
+              signUpPage.style.display = "block";
+              userHomePage.style.display = "none";
+              manageRequestsPage.style.display = "none";
+              allEmployeesPage.style.display = "none";
+              employeeRequestPage.style.display = "none";
+              allRequestsPage.style.display = "none";
+              myRequestsPage.style.display = "none";
+            });
+          }
+          for (let i = 0; i < toSignIn.length; i++) {
+            toSignIn[i].addEventListener("click", function () {
+              homePage.style.display = "none";
+              signInPage.style.display = "block";
+              signUpPage.style.display = "none";
+              userHomePage.style.display = "none";
+              manageRequestsPage.style.display = "none";
+              allEmployeesPage.style.display = "none";
+              employeeRequestPage.style.display = "none";
+              allRequestsPage.style.display = "none";
+              myRequestsPage.style.display = "none";
+            });
+          }
+        }
+      }
+
+      function logOut() {
+        localStorage.removeItem("Token");
+        loggedInPerson = null;
+        // checkLogin().then(setupNav);
+        updateNav();
+      }
+
+      async function submitLogin() {
+        let username = document.getElementById("signInUsername").value;
+        let password = document.getElementById("signInPassword").value;
+        let invalidCreds = document.getElementById("invalid-credentials");
+
+        let credentials = {
+          username: username,
+          password: password,
+        };
+        console.log(credentials);
+
+        let response = await fetch(trmsAppUrl + "users/auth", { method: "POST", body: JSON.stringify(credentials) });
+        if (response.status === 200) {
+          let token = await response.text();
+          localStorage.setItem("Token", token);
+          invalidCreds.style.display = "none";
+          console.log(response);
+          // checkLogin().then(setupNav);
+          checkLogin();
+        } else if (response.status === 404) {
+          // TODO
+          // let msg = await response.text();
+          // alert(msg);
+          invalidCreds.style.display = "block";
+        }
+      }
+
+      function getAllEmployeesTable() {
+        fetch(`${trmsAppUrl}employees`)
+          .then((response) => response.json())
+          .then((data) => {
+            let allEmployeesTable = document.getElementById("all-employees-body");
+            allEmployeesTable.innerHTML = "";
+
+            data.sort(function (a, b) {
+              return a.empId - b.empId;
+            });
+            data.forEach(function (item) {
+              let id = item.empId;
+              let firstName = item.firstName;
+              let lastName = item.lastName;
+              let role = item.role.name;
+              let funds = item.funds;
+
+              allEmployeesTable.innerHTML += `<tr index = "${id}">
+              <th scope="row">${id}</th>
+              <td>${firstName}</td>
+              <td>${lastName}</td>
+              <td>${role}</td>
+              <td>${funds}</td>
+            </tr>`;
+            });
+          })
+          .catch((err) => console.error(err));
+      }
+
+      function getAllPendingRequests() {
+        const options = {
+          method: "GET",
+          headers: {
+            Token: localStorage.token,
+          },
+        };
+
+        fetch(`${trmsAppUrl}requests`, options)
+          .then((response) => response.json())
+          .then((data) => {
+            let pendingRequestsBody = document.getElementById("pending-requests-body");
+            pendingRequestsBody.innerHTML = "";
+
+            data.sort(function (a, b) {
+              return a.reqId - b.reqId;
+            });
+            data.forEach(function (item) {
+              let id = item.reqId;
+              let empId = item.requestor.empId;
+              let location = item.location;
+              let funds = item.requestor.funds;
+              let cost = item.cost;
+              let month = item.eventDate[1];
+              let day = item.eventDate[2];
+              let year = item.eventDate[0];
+
+              if (item.status.name === "Pending Approval") {
+                pendingRequestsBody.innerHTML += `<tr index = "${id}">
+              <th scope="row">${id}</th>
+              <th scope="row">${empId}</th>
+              <td>${location}</td>
+              <td>${funds}</td>
+              <td>${cost}</td>
+              <td>${month}</td>
+              <td>${day}</td>
+              <td>${year}</td>
+              <td><button onclick="aproveRequest(${id})" class = "approve btn btn-success">Accept</button></td>
+              <td><button onclick="denyRequest(${id})" class = "deny btn btn-danger">Reject</button></td>
+            </tr>`;
+              }
+            });
+          })
+          .catch((err) => console.error(err));
+      }
+
+      function denyRequest(x) {
+        fetch(`${trmsAppUrl}reject/${x}`)
+          .then(() => getAllPendingRequests())
+          .catch((err) => console.error(err));
+      }
+      function aproveRequest(x) {
+        fetch(`${trmsAppUrl}approve/${x}`)
+          .then(() => getAllPendingRequests())
+          .catch((err) => console.error(err));
+      }
+
+      function getAllRequests() {
+        const options = {
+          method: "GET",
+          headers: {
+            Token: localStorage.token,
+          },
+        };
+        fetch(`${trmsAppUrl}requests`, options)
+          .then((response) => response.json())
+          .then((data) => {
+            let allRequestsBody = document.getElementById("all-requests-body");
+            allRequestsBody.innerHTML = "";
+
+            data.sort(function (a, b) {
+              return a.reqId - b.reqId;
+            });
+            data.forEach(function (item) {
+              let id = item.reqId;
+              let eId = item.requestor.empId;
+              let location = item.location;
+              let funds = item.requestor.funds;
+              let cost = item.cost;
+              let month = item.eventDate[1];
+              let day = item.eventDate[2];
+              let year = item.eventDate[0];
+              let status = item.status.name;
+              let count = 0;
+
+              allRequestsBody.innerHTML += `<tr index = "${id}">
+              <th scope="row">${id}</th>
+              <td>${eId}</td>
+              <td>${location}</td>
+              <td>${funds}</td>
+              <td>${cost}</td>
+              <td>${month}</td>
+              <td>${day}</td>
+              <td>${year}</td>
+              <td>${status}</td>
+            </tr>`;
+            });
+          })
+          .catch((err) => console.error(err));
+      }
+      function getMyRequests() {
+        const options = {
+          method: "GET",
+          headers: {
+            Token: localStorage.token,
+          },
+        };
+
+        fetch(`${trmsAppUrl}requests`, options)
+          .then((response) => response.json())
+          .then((data) => {
+            let myRequestsBody = document.getElementById("my-requests-body");
+            myRequestsBody.innerHTML = "";
+            let count = 0;
+            data.sort(function (a, b) {
+              return a.reqId - b.reqId;
+            });
+            data.forEach(function (item) {
+              let id = item.reqId;
+              let eId = item.requestor.empId;
+              let location = item.location;
+              let funds = item.requestor.funds;
+              let cost = item.cost;
+              let month = item.eventDate[1];
+              let day = item.eventDate[2];
+              let year = item.eventDate[0];
+              let status = item.status.name;
+              if (eId === loggedInPerson.empId) {
+                myRequestsBody.innerHTML += `<tr index = "${id}">
+              <th scope="row">${id}</th>  
+              <td>${location}</td>
+              <td>${cost}</td>
+              <td>${month}</td>
+              <td>${day}</td>
+              <td>${year}</td>
+              <td>${status}</td>
+            </tr>`;
+                count++;
+              }
+              if (count === 0) {
+                document.getElementById("no-current-requests").style.display = "block";
+                document.getElementById("my-current-requests").style.display = "none";
+              } else {
+                document.getElementById("no-current-requests").style.display = "none";
+                document.getElementById("my-current-requests").style.display = "table";
+              }
+            });
+          })
+          .catch((err) => console.error(err));
+      }
+
+      //submitting the requests
+
+      function submitRequest() {
+        let location = document.getElementById("requestLocation").value;
+        let eventType = document.getElementById("requestType").selectedIndex + 1;
+        let gradingFormat = document.getElementById("requestGradingFormat").selectedIndex + 1;
+        let cost = document.getElementById("requestCost").value;
+        let date = document.getElementById("requestDate").value;
+        let time = document.getElementById("requestTime").value;
+        let description = document.getElementById("requestDescription").value;
+        let today = new Date();
+        let submitTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+        let request = {
+          requestor: loggedInPerson,
+          eventDate: date,
+          eventTime: String(time) + ":01",
+          location: location,
+          description: description,
+          cost: cost,
+          gradingFormat: {
+            formatId: gradingFormat,
+          },
+          eventType: {
+            eventId: eventType,
+          },
+          status: {
+            statusId: 4, //
+            name: "Pending Approval", //
+            approver: "Manager", //
+          },
+          submittedAt: "",
+        };
+
+        fetch(`${trmsAppUrl}requests`, {
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Token: localStorage.token,
+          },
+          method: "POST",
+          body: JSON.stringify(request),
+        })
+          .then(function (res) {
+            alert("Sent");
+          })
+          .catch(function (res) {
+            alert("Something went wrong");
+          });
+      }
+
+      // form listeners
+      let requestSubmit = document.getElementById("submitRequestForm");
+      requestSubmit.addEventListener("submit", function (e) {
+        e.preventDefault();
+        submitRequest();
+      });
+
+      // onload
+
+      checkLogin();
     </script>
   </body>
 </html>

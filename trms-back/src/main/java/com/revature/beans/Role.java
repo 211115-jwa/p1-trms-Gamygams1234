@@ -8,7 +8,7 @@ public class Role {
 	
 	public Role() {
 		roleId = 1;
-		name="Employee";
+		name="User";
 	}
 
 	public int getRoleId() {
