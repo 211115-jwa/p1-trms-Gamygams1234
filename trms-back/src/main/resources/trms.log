@@ -279,3 +279,29 @@
 2022-01-09 16:43:43 INFO  RequestsController:94 - Get all requests
 2022-01-09 17:38:46 INFO  ReimbursementDAOTest:134 - null
 2022-01-09 17:54:23 INFO  ReimbursementDAOTest:134 - null
+2022-01-10 00:00:52 INFO  EmployeesController:23 - Get all employees
+2022-01-10 00:00:52 INFO  EmployeesController:23 - Get all employees
+2022-01-10 00:00:56 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:00:59 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:01:00 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:01:19 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:01:45 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:01:55 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:02:29 INFO  RequestsController:45 - submitting Reimbursment Reguest
+2022-01-10 00:02:41 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:02:44 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:02:46 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:03:01 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:03:12 INFO  EmployeesController:23 - Get all employees
+2022-01-10 00:03:13 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:10:09 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:10:11 INFO  EmployeesController:23 - Get all employees
+2022-01-10 00:11:28 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:11:38 INFO  EmployeesController:23 - Get all employees
+2022-01-10 00:12:12 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:12:15 INFO  EmployeesController:23 - Get all employees
+2022-01-10 00:12:28 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:12:29 INFO  EmployeesController:23 - Get all employees
+2022-01-10 00:13:18 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:13:27 INFO  RequestsController:94 - Get all requests
+2022-01-10 00:13:37 INFO  EmployeesController:23 - Get all employees

@@ -46,17 +46,7 @@
         </div>
       </div>
     </section>
-    <section id="manage-requests" class="dark-cyan padding-container page">
-      <div class="width-container">
-        <div class="left-side">
-          <h1 class="mt-3 mb-3 poppins fw-500">this is the manageRequestsPage</h1>
-          <p class="mt-3 mb-3">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
-        </div>
-        <div class="right-side">
-          <img src="./images/illustration-flowing-conversation.svg" alt="" />
-        </div>
-      </div>
-    </section>
+
 
     <section id="all-employees" class="dark-cyan padding-container page">
       <div class="width-container">
@@ -247,13 +237,15 @@
             </div>
           </div>
           <div id="invalid-credentials" class="invalid-credentials mb-3">
-            <p>Password or username was invalid.</p>
+            <p id = "invalid-password">Password or username was invalid.</p>
           </div>
           <div class="form-group row">
             <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary">Sign In</button>
-              <button class="btn btn-outline-primary to-home">Back To Home</button>
+              <button id = "loginBtn" type="submit" class="btn btn-primary">Sign In</button>
+           
             </div>
+            <button class="btn btn-outline-primary to-home">Back To Home</button>
+ 
           </div>
         </form>
       </div>
@@ -306,7 +298,7 @@
       const signUpPage = document.getElementById("sign-up-page");
       const homePage = document.getElementById("home-page");
       const userHomePage = document.getElementById("user-home");
-      const manageRequestsPage = document.getElementById("manage-requests");
+      // const manageRequestsPage = document.getElementById("manage-requests");
       const allEmployeesPage = document.getElementById("all-employees");
       const employeeRequestPage = document.getElementById("employee-request");
       const pendingRequestPage = document.getElementById("pending-requests-page");
@@ -329,16 +321,18 @@
 
       for (let i = 0; i < toHome.length; i++) {
         toHome[i].addEventListener("click", function () {
+
           homePage.style.display = "block";
           signInPage.style.display = "none";
           signUpPage.style.display = "none";
           userHomePage.style.display = "none";
-          manageRequestsPage.style.display = "none";
+          // manageRequestsPage.style.display = "none";
           allEmployeesPage.style.display = "none";
           employeeRequestPage.style.display = "none";
           pendingRequestPage.style.display = "none";
           allRequestsPage.style.display = "none";
           myRequestsPage.style.display = "none";
+          document.getElementById("invalid-credentials").style.display = "none";
         });
       }
 
@@ -375,12 +369,14 @@
           } else if (status === "Benefits Coordinator") {
             headerNav.innerHTML = `<button class="btn btn-primary view-all-requests">View All Requests</button><button class="btn btn-primary view-pending-requests">View Pending Requests</button><button class="btn btn-primary view-all-employees">View All Employees</button> <button class="btn btn-sky log-out">Log Out</button>`;
           }
+          // all of the buttons
           let logOutButton = document.querySelectorAll(".log-out");
           let allEmployeesButton = document.querySelectorAll(".view-all-employees");
           let submitRequestButton = document.querySelectorAll(".submit-request");
           let viewPendingRequestButton = document.querySelectorAll(".view-pending-requests");
           let viewAllRequestButton = document.querySelectorAll(".view-all-requests");
           let viewMyRequestsButton = document.querySelectorAll(".view-my-requests");
+        
 
           // setting some of the UI
 
@@ -395,7 +391,7 @@
           signInPage.style.display = "none";
           signUpPage.style.display = "none";
           homePage.style.display = "none";
-          manageRequestsPage.style.display = "none";
+          // manageRequestsPage.style.display = "none";
           allEmployeesPage.style.display = "none";
           employeeRequestPage.style.display = "none";
           pendingRequestPage.style.display = "none";
@@ -411,12 +407,13 @@
               signInPage.style.display = "none";
               signUpPage.style.display = "none";
               userHomePage.style.display = "none";
-              manageRequestsPage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
               allEmployeesPage.style.display = "none";
               employeeRequestPage.style.display = "none";
               pendingRequestPage.style.display = "none";
               allRequestsPage.style.display = "none";
               myRequestsPage.style.display = "none";
+
             });
           }
           for (let i = 0; i < allEmployeesButton.length; i++) {
@@ -425,7 +422,7 @@
               signInPage.style.display = "none";
               signUpPage.style.display = "none";
               userHomePage.style.display = "none";
-              manageRequestsPage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
               employeeRequestPage.style.display = "none";
               allEmployeesPage.style.display = "block";
               pendingRequestPage.style.display = "none";
@@ -441,7 +438,7 @@
               signInPage.style.display = "none";
               signUpPage.style.display = "none";
               userHomePage.style.display = "none";
-              manageRequestsPage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
               employeeRequestPage.style.display = "block";
               allEmployeesPage.style.display = "none";
               pendingRequestPage.style.display = "none";
@@ -456,7 +453,7 @@
               signInPage.style.display = "none";
               signUpPage.style.display = "none";
               userHomePage.style.display = "none";
-              manageRequestsPage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
               employeeRequestPage.style.display = "none";
               allEmployeesPage.style.display = "none";
               pendingRequestPage.style.display = "block";
@@ -471,7 +468,7 @@
               signInPage.style.display = "none";
               signUpPage.style.display = "none";
               userHomePage.style.display = "none";
-              manageRequestsPage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
               employeeRequestPage.style.display = "none";
               allEmployeesPage.style.display = "none";
               pendingRequestPage.style.display = "none";
@@ -486,7 +483,7 @@
               signInPage.style.display = "none";
               signUpPage.style.display = "none";
               userHomePage.style.display = "none";
-              manageRequestsPage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
               employeeRequestPage.style.display = "none";
               allEmployeesPage.style.display = "none";
               pendingRequestPage.style.display = "none";
@@ -498,13 +495,14 @@
           headerNav.innerHTML = `<button class="btn btn-primary to-sign-in">Sign In</button>`;
           let toSignIn = document.querySelectorAll(".to-sign-in");
           let toSignUp = document.querySelectorAll(".to-sign-up");
+          let toHomeButton = document.querySelectorAll(".to-home");
           for (let i = 0; i < toSignUp.length; i++) {
             toSignUp[i].addEventListener("click", function () {
               homePage.style.display = "none";
               signInPage.style.display = "none";
               signUpPage.style.display = "block";
               userHomePage.style.display = "none";
-              manageRequestsPage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
               allEmployeesPage.style.display = "none";
               employeeRequestPage.style.display = "none";
               allRequestsPage.style.display = "none";
@@ -517,11 +515,26 @@
               signInPage.style.display = "block";
               signUpPage.style.display = "none";
               userHomePage.style.display = "none";
-              manageRequestsPage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
               allEmployeesPage.style.display = "none";
               employeeRequestPage.style.display = "none";
               allRequestsPage.style.display = "none";
               myRequestsPage.style.display = "none";
+            });
+          }
+          for (let i = 0; i < toHomeButton.length; i++) {
+            toHomeButton[i].addEventListener("click", function () {
+              e.preventDefault();
+              homePage.style.display = "block";
+              signInPage.style.display = "none";
+              signUpPage.style.display = "none";
+              userHomePage.style.display = "none";
+              // manageRequestsPage.style.display = "none";
+              allEmployeesPage.style.display = "none";
+              employeeRequestPage.style.display = "none";
+              allRequestsPage.style.display = "none";
+              myRequestsPage.style.display = "none";
+              document.getElementById("invalid-credentials").style.display = "none";
             });
           }
         }
@@ -530,6 +543,7 @@
       function logOut() {
         localStorage.removeItem("Token");
         loggedInPerson = null;
+        localStorage.removeItem
         // checkLogin().then(setupNav);
         updateNav();
       }
